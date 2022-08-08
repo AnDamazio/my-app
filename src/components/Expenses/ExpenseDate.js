@@ -1,11 +1,11 @@
 import "./ExpenseDate.css";
 
-const capitalize = (text) => {
-  text = text.substr(0, 1).toUpperCase() + text.substr(1);
-  return text;
-};
+const ExpenseDate = (props) => {
+  const capitalize = (text) => {
+    text = text.substr(0, 1).toUpperCase() + text.substr(1);
+    return text;
+  };
 
-export default function ExpenseDate(props) {
   const month = capitalize(
     props.date.toLocaleString("pt-BR", { month: "long" })
   );
@@ -19,4 +19,6 @@ export default function ExpenseDate(props) {
       <div className="expense-date__day">{day}</div>
     </div>
   );
-}
+};
+
+export default ExpenseDate;
