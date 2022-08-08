@@ -22,13 +22,19 @@ const ExpenseForm = (props) => {
 
   const dateChangeHandler = (event) => {
     setUserInput((prevState) => {
-      return { ...prevState, enteredDate: new Date(event.target.value) };
+      return { ...prevState, enteredDate: event.target.value };
     });
+  };
+
+  const expense = {
+    title: userInput.enteredTitle,
+    date: new Date(userInput.enteredDate),
+    amount: userInput.enteredAmount,
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-    props.onSaveExpenseData(userInput);
+    props.onSaveExpenseData(expense);
   };
 
   return (

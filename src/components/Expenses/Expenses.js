@@ -10,6 +10,8 @@ export default function Expenses(props) {
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
+
+  console.log(props.items)
   return (
     <>
       <Card className="expenses">
