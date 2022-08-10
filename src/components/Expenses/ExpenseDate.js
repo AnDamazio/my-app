@@ -7,9 +7,9 @@ const ExpenseDate = (props) => {
   };
 
   const month = capitalize(
-    props.date.toLocaleString("pt-BR", { month: "long" })
+    props.date.toLocaleString("en-US", { month: "long" })
   );
-  const day = props.date.toLocaleString("pt-BR", { day: "2-digit" });
+  const day = props.date.toLocaleString("en-US", { day: "2-digit" });
   const year = props.date.getFullYear();
 
   return (

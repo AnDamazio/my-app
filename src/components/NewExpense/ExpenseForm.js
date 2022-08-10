@@ -28,7 +28,7 @@ const ExpenseForm = (props) => {
 
   const expense = {
     title: userInput.enteredTitle,
-    date: new Date(userInput.enteredDate),
+    date: new Date(userInput.enteredDate.replace(/-/g, '\/').replace(/T.+/, '')),
     amount: +userInput.enteredAmount,
   };
 
